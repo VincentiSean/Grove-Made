@@ -32,7 +32,7 @@ figcaption {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
   line-height: 1.5;
 }
 
@@ -76,51 +76,61 @@ select {
   }
 }
 
-/* END RESET */
+/* ^-------- RESET 
+
+   ///  Table of Contents   \\\
+        
+        1. Base
+            - HTML
+            - Body
+        2. Blocks
+            - Header
+            - Sections
+            - Divs
+            - Spans
+            - Footer
+        3. Clickables
+            - Links
+            - Buttons
+        4. Images
+            - Images
+            - SVG
+        5. Text
+            - H1, H2, H3, H4, H5, H6
+            - P 
+            - Misc Font
+        6. Forms
+        7. Video
+        8. Extras
+            - Swiper/Carousel
+
+*/
+
+/*  -----------------
+    |   1. Base     |
+    -----------------
+*/
+
+html {
+    height: 100%;
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+}
 
 body {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
+    padding: 0;
+    margin: 0px;
     font-weight: 500;
+    max-width: 100%;
 }
 
-
-.roboto {
-    font-family: 'Roboto', sans-serif;
-}
-
-.learn-link {
-    color: #000;
-    border-bottom: 1px solid #000;
-    font-size: .65em;
-    font-weight: 600;
-    letter-spacing: .075em;
-    margin: 0 auto;
-    padding-bottom: 1.5px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.section-margins {
-    margin: 2.25em 0 0 0;
-}
-
-.section-titles {
-    font-size: 1.5em;
-    font-weight: 500;
-    letter-spacing: .025em;
-}
-
-.gray {
-    color: #aaa;
-    font-size: .8em;
-    font-weight: 400;
-    letter-spacing: .05em;
-    margin: 1em auto 1.25em auto;
-    text-align: center;
-    widtH: 88%;
-}
+/*  -----------------
+    |   2. Blocks   |
+    -----------------
+*/
 
 header {
     background-color: #fff;
@@ -128,6 +138,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
 
     display: flex;
     flex-direction: row;
@@ -135,13 +146,7 @@ header {
     justify-content: space-between;
 }
 
-#hambrgr-btn {
-    background-color: transparent;
-    border: none;
-    margin-left: 5px;
-    outline: none;
-}
-
+/* Div that hold the spans to make the hamburger icon */
 #hambrgr-icon {
     width: 20px;
     height: 20px;
@@ -214,24 +219,14 @@ header {
     left: 50%;
 }
 
+/* Div that hold svgs for company logo */
 #company-logo {
     width: 8em;
 }
 
-.capital-link {
-    color: #000;
-    font-size: .65em;
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.no-underline {
-    text-decoration: none;
-}
-
-header a {
-    margin-right: 1.25em;
+.section-margins {
+    margin: 2.25em 0 0 0;
+    width: 100%;
 }
 
 #hero-section {
@@ -253,6 +248,177 @@ header a {
     height: 100%;
 }
 
+#inspire-section, #featured-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inspire-tile {
+    width: 92%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-office-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    height: 250px;
+    margin: 100px auto 50px auto;
+    padding: 0;
+    width: 100%;
+
+    background: url('../imgs/compAndLaptopBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#home-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    width: 90%;
+}
+
+#hard-way-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+#mission-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+#person-div {
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    row-gap: 6px;
+    column-gap: 10px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.hidden-info {
+    display: none;
+    grid-column: 1/4;  
+    width: 100%;
+}
+
+
+/*  -----------------
+    | 3. Clickables |
+    -----------------
+*/
+
+.no-underline {
+    text-decoration: none;
+}
+
+header a {
+    margin-right: 1.25em;
+}
+
+#hambrgr-btn {
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    outline: none;
+}
+
+.learn-link {
+    color: #000;
+    border-bottom: 2px solid #000;
+    font-size: .65em;
+    font-weight: 600;
+    letter-spacing: .075em;
+    margin: 0 auto;
+    padding-bottom: 1.5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.capital-link {
+    color: #000;
+    font-size: .65em;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+#hero-section a {
+    border-color: #fff;
+    color: #fff;
+    margin: 1em 0 7em 0;
+}
+
+#inspire-section a {
+    margin-bottom: 3.25em;
+}
+
+#home-office-section a {
+    border-color: #fff;
+    color: #fff;
+}
+
+
+/*  -----------------
+    |  4. Images    |
+    -----------------
+*/
+
+.person-img {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+/*  -----------------
+    |   5. Text     |
+    -----------------
+*/
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-titles {
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: .025em;
+}
+
+.gray {
+    color: #aaa;
+    font-size: .8em;
+    font-weight: 400;
+    letter-spacing: .05em;
+    margin: 1em auto 1.25em auto;
+    text-align: center;
+    widtH: 88%;
+}
+
 #hero-section h1 {
     font-size: 2.5em;
     font-weight: 400;
@@ -268,32 +434,6 @@ header a {
     text-align: center;
 }
 
-#hero-section a {
-    border-color: #fff;
-    color: #fff;
-    margin: 1em 0 7em 0;
-}
-
-#inspire-section, #featured-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#inspire-section a {
-    margin-bottom: 3.25em;
-}
-
-.inspire-tile {
-    width: 92%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .tile-title {
     font-size: 1em;
     font-weight: 600;
@@ -303,4 +443,104 @@ header a {
 
 #featured-section p {
     margin: 0.5em 0 0.25em;
+}
+
+#home-section-content p {
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-bottom: 0.9em;
+}
+
+#hard-way-section p {
+    margin-bottom: 2em;
+}
+
+/*  -----------------
+    |   6. Forms    |
+    -----------------
+*/
+
+/*  -----------------
+    |   7. Video    |
+    -----------------
+*/
+
+#videoPlayer {
+    height: 26vh;
+    width: 95%;
+}
+
+/*  -----------------
+    |  8. Extras    |
+    -----------------
+*/
+
+.swiper-container {
+    width: 90%;
+    height: 300px;
+    padding: 0;
+}
+
+.swiper-wrapper {
+    margin: 40px auto 0 auto;
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 0px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    top: 0;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    height: 7px;
+    width: 7px;
+    margin: 0 8px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: #000;
+}
+
+.swiper-slide a {
+    color: #aaa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75em;
+    height: 100%;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+}
+
+.slide-img-div {
+    display: flex;
+    height: 70%;
+    margin-bottom: 1em;
+    position: relative;
+    width: 100%;
+}
+
+.slide-img-div::before {
+    content: ''; 
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+        
+    background: rgba(0,0,0,0.045);
+}
+
+.slide-img-div img {
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    width: 90%;
 }
