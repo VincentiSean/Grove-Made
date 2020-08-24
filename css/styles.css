@@ -134,6 +134,7 @@ body {
 
 header {
     background-color: #fff;
+    height: 45px;
     position: sticky;
     top: 0;
     left: 0;
@@ -219,6 +220,10 @@ header {
     left: 50%;
 }
 
+#tablet-nav {
+    display: none;
+}
+
 /* Div that hold svgs for company logo */
 #company-logo {
     width: 8em;
@@ -232,10 +237,11 @@ header {
 #hero-section {
     background-image: url("https://grovemade.imgix.net/https%3A%2F%2Fsiteleaf.grovemade.com%2Fuploads%2FcoverB-desk-collection-leather-desk-pad-F4.jpg?auto=format&ixlib=python-1.1.2&w=1100&s=b0248702d378d0988e2c2b1fb9303805");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     color: #fff;
     height: auto;
+    padding-bottom: 25%;
     width: 100%;
 }
 
@@ -255,6 +261,14 @@ header {
     justify-content: center;
 }
 
+#tile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .inspire-tile {
     width: 92%;
 
@@ -271,15 +285,14 @@ header {
     justify-content: center;
 
     color: #fff;
-    height: 250px;
-    margin: 100px auto 50px auto;
-    padding: 0;
+    height: auto;
+    margin: 50px auto 50px auto;
+    padding: 20% 0 20% 0;
     width: 100%;
 
-    background: url('../imgs/compAndLaptopBackground.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center; 
 }
 
 #home-section-content {
@@ -307,15 +320,20 @@ header {
     align-items: center;
     justify-content: center;
 
+    height: auto;
+    margin-bottom: 60px;
     text-align: center;
+    width: 100%;
 }
 
 #person-div {
     display: grid;
-    grid-template-columns: 31% 31% 31%;
-    row-gap: 6px;
-    column-gap: 10px;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    grid-column-gap: 10px;
+
+    margin: 75px auto 0 auto;
+    text-align: center;
     width: 90%;
 }
 
@@ -325,6 +343,79 @@ header {
     width: 100%;
 }
 
+#join-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#design-inspires-block {
+    background-color: #9aa8b1;
+    height: 210px;
+    margin: 50px auto 1em auto;
+    width: 93%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #f5f5f5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#up-btn-div {
+    display: none;
+}
+
+#newsletter-section {
+    width: 200px;
+}
+
+#link-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 7em;
+    width: 275px;
+}
+
+#social-section {
+    margin-top: 4em;
+    width: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-div {
+    margin-bottom: 3em;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#copyright-div {
+    margin-bottom: 3em;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 
 /*  -----------------
     | 3. Clickables |
@@ -370,7 +461,7 @@ header a {
 #hero-section a {
     border-color: #fff;
     color: #fff;
-    margin: 1em 0 7em 0;
+    margin: 1em 0 1.5em 0;
 }
 
 #inspire-section a {
@@ -382,6 +473,38 @@ header a {
     color: #fff;
 }
 
+.orange-person-link {
+    color: #CC6633	;
+}
+
+.bold-person-link {
+    color: #000;
+    font-weight: 900;
+}
+
+.footer-link {
+    color: #303030;
+    letter-spacing: 0.05em;
+    margin: 0 1em 0.5em 0;
+    text-decoration: none;
+}
+
+.copyright-links {
+    color: #888;
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#department-link {
+    color: #4a4a4a;
+    font-size: 0.7em;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    text-decoration: none;
+}
 
 /*  -----------------
     |  4. Images    |
@@ -390,8 +513,19 @@ header a {
 
 .person-img {
     cursor: pointer;
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
+}
+
+#design-inspires-block img {
+    height: auto;
+    margin-bottom: 0.8em;
+    width: 50px;
+}
+
+#social-div svg {
+    height: 20px;
+    width: 20px
 }
 
 /*  -----------------
@@ -404,7 +538,8 @@ header a {
 }
 
 .section-titles {
-    font-size: 1.5em;
+    color: #2a2a2a;
+    font-size: 1.35em;
     font-weight: 500;
     letter-spacing: .025em;
 }
@@ -445,6 +580,10 @@ header a {
     margin: 0.5em 0 0.25em;
 }
 
+#home-section-content .section-titles {
+    color: #fff;
+}
+
 #home-section-content p {
     font-size: 0.8em;
     font-weight: 400;
@@ -455,10 +594,90 @@ header a {
     margin-bottom: 2em;
 }
 
+#mission-section .section-titles {
+    width: 80%;
+}
+
+/* Get the first info in each hidden info div -> (person's name) */
+.person-description:nth-child(1) {
+    margin: 1.5em auto;
+}
+
+.person-description {
+    color: #4a4a4a;
+    font-size: 1em;
+    line-height: 1.7em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.person-bttm {
+    font-size: 0.6em;
+    font-weight: 900;
+    letter-spacing: 0.07em;
+    margin: 2em auto;
+}
+
+#join-section .section-titles {
+    margin-bottom: 1em;
+}
+
+#design-inspires-block h3 {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+#design-inspires-block p {
+    color: #fff;
+    font-size: 0.8em;
+    margin-top: 1em;
+    text-align: center;
+    width: 85%;
+}
+
+#newsletter-section h3 {
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    text-align: center;
+}
+
 /*  -----------------
     |   6. Forms    |
     -----------------
 */
+
+#newsletter-section form {
+    border-bottom: 1px solid #000;
+    margin-top: 1.5em;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#newsletter-section input[type=email] {
+    background-color: transparent;
+    border: none;
+    color: #4a4a4a;
+    font-size: 0.65em;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 10px 0 ;
+}
+
+#newsletter-section input[type=submit] {
+    background-color: transparent;
+    border: none;
+    color: #4a4a4a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.65em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
 
 /*  -----------------
     |   7. Video    |
@@ -467,6 +686,7 @@ header a {
 
 #videoPlayer {
     height: 26vh;
+    margin-bottom: 25px;
     width: 95%;
 }
 
@@ -477,7 +697,7 @@ header a {
 
 .swiper-container {
     width: 90%;
-    height: 300px;
+    height: 80vw;
     padding: 0;
 }
 
@@ -543,4 +763,190 @@ header a {
     object-fit: contain;
     margin: 0 auto;
     width: 90%;
+}
+
+@media only screen and (min-width: 700px) {
+
+    /*------------------
+    |     Blocks       |
+     ------------------*/
+    header {
+        height: 75px;
+    }
+
+    #hambrgr-btn {
+        display: none;
+    }
+
+    #tablet-nav {
+        display: inline;
+        margin-left: 50px;
+    }
+
+    #tablet-nav a {
+        color: #2a2a2a;
+        font-size: 0.85em;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    #tile-container {
+        flex-direction: row;
+        width: 92%;
+    }
+
+    .inspire-tile {
+        width: 46%;
+    }
+
+    #home-office-section {
+        margin: 50px auto 50px auto;
+        padding: 13% 0 13% 0;
+    }
+
+    #hard-way-section {
+        margin-top: 8em;
+    }
+
+    #person-div {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 15px;
+        grid-column-gap: 15px;
+    }
+
+    #design-inspires-block {
+        height: 425px;
+        margin-bottom: 50px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 500px;
+        margin-bottom: 0;
+    }
+
+    #up-btn-div {
+        grid-column: 1/5;
+        grid-row: 1/2;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        height: 80px;
+        width: 100%;
+    }
+
+    #newsletter-section {
+        grid-column: 2/4;
+        grid-row: 2/4;
+    }
+
+    #link-section {
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+
+    #social-section {
+        grid-column: 1/5;
+        grid-row: 4/5;
+    }
+
+    /* -----------------
+    |       Text        |
+     ------------------*/
+
+     .tight-titles {
+         font-size: 2.5em;
+         font-weight: 300;
+         text-align: center;
+         width: 250px;
+     }
+
+     .tablet-gray {
+         font-size: 1em;
+         width: 280px;
+     }
+     
+     .tile-title {
+         font-size: 1.55em;
+         font-weight: 300;
+         margin-bottom: 1em;
+         text-align: center;
+     }
+
+     .tablet-titles {
+         font-size: 2em;
+         font-weight: 300;
+     }
+
+     /* Specific targeting to make room between p and pagination */
+     #featured-section p {
+         margin-bottom: 2em;
+     }
+
+     .large-office-title {
+         font-size: 3.5em;
+         line-height: 1.25em;
+         width: 75%;
+     }
+
+     #home-office-section p {
+         font-size: 1em;
+     }
+
+     #hard-way-section p {
+         font-size: 1em;
+         width: 625px;
+     }
+
+     #mission-section h2 {
+         font-size: 2em;
+         font-weight: 300;
+         max-width: 20%;
+     }
+
+     #design-inspires-block h3 {
+        font-size: 2.25em;
+        font-weight: 300;
+    }
+    
+    #design-inspires-block p {
+        font-size: 1em;
+        font-weight: 400;
+        margin-top: 1em;
+        text-align: center;
+        width: 60%;
+    }
+    
+
+    /*--------------
+    |   Clickables |
+     --------------*/
+
+    .learn-link {
+        border-bottom: 1px solid #2a2a2a;
+        font-size: 0.8em;
+    }
+
+    #up-btn-div a {
+        background-color: #000;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 600;
+        height: 80px;
+        line-height: 0.9em;
+        margin-right: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 80px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
