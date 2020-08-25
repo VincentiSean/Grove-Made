@@ -643,6 +643,10 @@ header a {
     text-align: center;
 }
 
+#newsletter-about {
+    display: none;
+}
+
 /*  -----------------
     |   6. Forms    |
     -----------------
@@ -684,11 +688,22 @@ header a {
     -----------------
 */
 
-#videoPlayer {
-    height: 26vh;
-    margin-bottom: 25px;
-    width: 95%;
+#responsive-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    overflow: hidden;
+    width: 95%; 
+} 
+    
+#responsive-frame  {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border: 0;
 }
+
 
 /*  -----------------
     |  8. Extras    |
@@ -818,12 +833,13 @@ header a {
 
     #design-inspires-block {
         height: 425px;
+        margin-top: 135px;
         margin-bottom: 50px;
     }
 
     footer {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         height: 500px;
         margin-bottom: 0;
@@ -844,16 +860,41 @@ header a {
     #newsletter-section {
         grid-column: 2/4;
         grid-row: 2/4;
+        
+        align-items: flex-start;
+        margin: 5em 0 0 2em;
+        width: 100%;
     }
 
     #link-section {
         grid-column: 1/2;
         grid-row: 2/4;
+
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10em 0 0 2.5em;
+        width: 100%;
     }
 
     #social-section {
         grid-column: 1/5;
-        grid-row: 4/5;
+        grid-row: 5/5;
+
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        padding-right: 25px;
+        width: 100%;
+    }
+
+    #social-div {
+        margin-left: 35px;
+        margin-right: 35px;
+        width: 150px;
+    }
+
+    #copyright-div {
+        flex-direction: row;
     }
 
     /* -----------------
@@ -910,6 +951,10 @@ header a {
          max-width: 20%;
      }
 
+     #join-section h2 {
+         margin-top: 70px;
+     }
+
      #design-inspires-block h3 {
         font-size: 2.25em;
         font-weight: 300;
@@ -921,6 +966,19 @@ header a {
         margin-top: 1em;
         text-align: center;
         width: 60%;
+    }
+
+    #newsletter-section h3 {
+        text-align: left;
+    }
+
+    #newsletter-about {
+        color: #9aa8b1;
+        display: block;
+        font-size: 0.85em;
+        font-style: italic;
+        margin-top: 2em;
+        margin-bottom: 5em;
     }
     
 
@@ -949,4 +1007,41 @@ header a {
         align-items: center;
         justify-content: center;
     }
+
+    .footer-link {
+        font-size: 1.2em;
+    }
+
+    .copyright-links {
+        font-size: 0.8em;
+    }
+
+    #department-link {
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 5px;
+        right: 40px;
+    }
+
+    /*---------------
+    |       Forms    |
+     ---------------*/
+
+    #newsletter-section form {
+        width: 100%;
+    }
+
+    #newsletter-section input[type=email],  #newsletter-section input[type=submit] {
+        font-size: 0.80em;
+    }
+
+    /*--------------
+    |      Video    |
+     --------------*/
+
+    #responsive-container { 
+        padding-bottom: 30%;
+        width: 50%; 
+    } 
+
 }
