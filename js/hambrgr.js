@@ -1,4 +1,8 @@
 function toggleHam() {
-    menu = document.getElementById("hambrgr-icon");
-    menu.classList.toggle("open");
+    let hmbrgr = document.getElementById("hambrgr-icon");
+    hmbrgr.classList.toggle("open");
+
+    let menu = document.getElementById('menu-section');
+    menu.classList.toggle('open-menu');
+    menu.classList.toggle('fadeout');
 }

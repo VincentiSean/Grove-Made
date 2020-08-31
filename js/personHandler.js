@@ -130,96 +130,260 @@ for (i = 0; i < people.length; i++) {
 function personInfo(num, clickedImg) {
     
     let img = clickedImg;
+    let personDiv,
+        sideImg;
     oldInfo();
     switch(num) {
         case 1:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Sara-2020-B2.jpg%3F_v%3D1585933372.06?auto=format&ixlib=python-1.1.2&w=200&s=4129bc6d1015c4cbc57eb3a029949c56";
-            document.getElementById('one').style.display = 'block';
+            
+            personDiv = document.getElementById('one');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Sara-2020-B2.jpg%3F_v%3D1585933372.06?auto=format&ixlib=python-1.1.2&w=200&s=4129bc6d1015c4cbc57eb3a029949c56";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 1;
             break;
         case 2:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Dashia_B2.jpg%3F_v%3D1454971390.4?auto=format&ixlib=python-1.1.2&w=200&s=5e249d9290f5c5f0d4df0bc532ccec1a";
-            document.getElementById('two').style.display = 'block';
+
+            personDiv = document.getElementById('two');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Dashia_B2.jpg%3F_v%3D1454971390.4?auto=format&ixlib=python-1.1.2&w=200&s=5e249d9290f5c5f0d4df0bc532ccec1a";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 2;
             break;
         case 3:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-John-2018-B1.jpg%3F_v%3D1529970563.92?auto=format&ixlib=python-1.1.2&w=200&s=16d21d0a5aa2e10abba3599455d483a9";
-            document.getElementById('three').style.display = 'block';
+
+            personDiv = document.getElementById('three');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-John-2018-B1.jpg%3F_v%3D1529970563.92?auto=format&ixlib=python-1.1.2&w=200&s=16d21d0a5aa2e10abba3599455d483a9";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 3;
             break;
         case 4:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Ken-2017-B1.jpg%3F_v%3D1487285759.81?auto=format&ixlib=python-1.1.2&w=200&s=9bb676a5a9e43b74f1497b04f6d5ffbd";
-            document.getElementById('four').style.display = 'block';
+
+            personDiv = document.getElementById('four');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Ken-2017-B1.jpg%3F_v%3D1487285759.81?auto=format&ixlib=python-1.1.2&w=200&s=9bb676a5a9e43b74f1497b04f6d5ffbd";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 4;
             break;
         case 5:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Max-2017-B1.jpg%3F_v%3D1487621129.81?auto=format&ixlib=python-1.1.2&w=200&s=d4b9f1e1cc3a6299e188dfcd3c12ad7d";
-            document.getElementById('five').style.display = 'block';
+
+            personDiv = document.getElementById('five');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Max-2017-B1.jpg%3F_v%3D1487621129.81?auto=format&ixlib=python-1.1.2&w=200&s=d4b9f1e1cc3a6299e188dfcd3c12ad7d";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 5;
             break;
         case 6:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Joe_813Captureone-1_edit_2.jpg%3F_v%3D1392968046.0?auto=format&ixlib=python-1.1.2&w=200&s=56d43d84fb580b455632fe6dc668e76a";
-            document.getElementById('six').style.display = 'block';
+
+            personDiv = document.getElementById('six');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Joe_813Captureone-1_edit_2.jpg%3F_v%3D1392968046.0?auto=format&ixlib=python-1.1.2&w=200&s=56d43d84fb580b455632fe6dc668e76a";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 6;
             break;
         case 7:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Ben_B2_1.jpg%3F_v%3D1536256969.19?auto=format&ixlib=python-1.1.2&w=200&s=52fead2bc4a473b6d0a6cba7bdcd2898";
-            document.getElementById('seven').style.display = 'block';
+
+            personDiv = document.getElementById('seven');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Ben_B2_1.jpg%3F_v%3D1536256969.19?auto=format&ixlib=python-1.1.2&w=200&s=52fead2bc4a473b6d0a6cba7bdcd2898";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 7;
             break;
         case 8:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Justin_B1_E6s05Bk.jpg%3F_v%3D1592236364.58?auto=format&ixlib=python-1.1.2&w=200&s=9d92b93ac90f21ab699c6c6fbbf7c17d";
-            document.getElementById('eight').style.display = 'block';
+
+            personDiv = document.getElementById('eight');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Justin_B1_E6s05Bk.jpg%3F_v%3D1592236364.58?auto=format&ixlib=python-1.1.2&w=200&s=9d92b93ac90f21ab699c6c6fbbf7c17d";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 8;
             break;
         case 9:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Victor-2017-B1.jpg%3F_v%3D1487269127.92?auto=format&ixlib=python-1.1.2&w=200&s=0c59d7e5ff0edb3058b1cd5beef58868";
-            document.getElementById('nine').style.display = 'block';
+
+            personDiv = document.getElementById('nine');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Victor-2017-B1.jpg%3F_v%3D1487269127.92?auto=format&ixlib=python-1.1.2&w=200&s=0c59d7e5ff0edb3058b1cd5beef58868";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 9;
             break;
         case 10:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Keckeley-2020-B1.jpg%3F_v%3D1585945083.56?auto=format&ixlib=python-1.1.2&w=200&s=a7c22c0ed3f1f2c348d6a5cb1ca07325";
-            document.getElementById('ten').style.display = 'block';
+
+            personDiv = document.getElementById('ten');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Keckeley-2020-B1.jpg%3F_v%3D1585945083.56?auto=format&ixlib=python-1.1.2&w=200&s=a7c22c0ed3f1f2c348d6a5cb1ca07325";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 10;
             break;
         case 11:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Christopher-2020-B3.jpg%3F_v%3D1585933691.3?auto=format&ixlib=python-1.1.2&w=200&s=7fe611fe330426af2338698ee6df62ca";
-            document.getElementById('eleven').style.display = 'block';
+
+            personDiv = document.getElementById('eleven');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Christopher-2020-B3.jpg%3F_v%3D1585933691.3?auto=format&ixlib=python-1.1.2&w=200&s=7fe611fe330426af2338698ee6df62ca";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 11;
             break;
         case 12:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Sean-2020-B1.jpg%3F_v%3D1586203279.76?auto=format&ixlib=python-1.1.2&w=200&s=a075aa02d64fdb09d24a0a286aa3879d";
-            document.getElementById('twelve').style.display = 'block';
+
+            personDiv = document.getElementById('twelve');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Sean-2020-B1.jpg%3F_v%3D1586203279.76?auto=format&ixlib=python-1.1.2&w=200&s=a075aa02d64fdb09d24a0a286aa3879d";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 12;
             break;
         case 13:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Mike-2020-B2.jpg%3F_v%3D1585930983.21?auto=format&ixlib=python-1.1.2&w=200&s=3bf171d32929959e3d0c4bd1560f4168";
-            document.getElementById('thirteen').style.display = 'block';
+
+            personDiv = document.getElementById('thirteen');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Mike-2020-B2.jpg%3F_v%3D1585930983.21?auto=format&ixlib=python-1.1.2&w=200&s=3bf171d32929959e3d0c4bd1560f4168";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 13;
             break;
         case 14:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Lydia-2020-B1.jpg%3F_v%3D1585945210.68?auto=format&ixlib=python-1.1.2&w=200&s=e09b78f088d4ace01bc1d41960f1ae49";
-            document.getElementById('fourteen').style.display = 'block';
+
+            personDiv = document.getElementById('fourteen');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Lydia-2020-B1.jpg%3F_v%3D1585945210.68?auto=format&ixlib=python-1.1.2&w=200&s=e09b78f088d4ace01bc1d41960f1ae49";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 14;
             break;
         case 15:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Christian-2020-B1.jpg%3F_v%3D1586197301.22?auto=format&ixlib=python-1.1.2&w=200&s=1157eae6112ddce2e8c44ff3be3ff4c8";
-            document.getElementById('fifteen').style.display = 'block';
+
+            personDiv = document.getElementById('fifteen');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Christian-2020-B1.jpg%3F_v%3D1586197301.22?auto=format&ixlib=python-1.1.2&w=200&s=1157eae6112ddce2e8c44ff3be3ff4c8";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 15;
             break;
         case 16:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Nick-2020-B1.jpg%3F_v%3D1585950624.55?auto=format&ixlib=python-1.1.2&w=200&s=adedcfef8a4f33318c7bdbc93688b4f9";
-            document.getElementById('sixteen').style.display = 'block';
+
+            personDiv = document.getElementById('sixteen');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Nick-2020-B1.jpg%3F_v%3D1585950624.55?auto=format&ixlib=python-1.1.2&w=200&s=adedcfef8a4f33318c7bdbc93688b4f9";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 16;
             break;
         case 17:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Nozomi-2017-B1.jpg%3F_v%3D1488819935.12?auto=format&ixlib=python-1.1.2&w=200&s=8f3b62180d49a38e54dc1823a7b37718";
-            document.getElementById('seventeen').style.display = 'block';
+
+            personDiv = document.getElementById('seventeen');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Nozomi-2017-B1.jpg%3F_v%3D1488819935.12?auto=format&ixlib=python-1.1.2&w=200&s=8f3b62180d49a38e54dc1823a7b37718";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+
             lastImage = 17;
             break;
         case 18:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Kevin_B1_SyocJtF.jpg%3F_v%3D1592236569.79?auto=format&ixlib=python-1.1.2&w=200&s=4ff76f28f7d8c6039648f990458ecde3";
-            document.getElementById('eighteen').style.display = 'block';
+
+            personDiv = document.getElementById('eighteen');
+            personDiv.style.display = 'flex';
+
+            // Create an image object for screen sizes 700px+ to display next to the information
+            sideImg = document.createElement('IMG');
+            sideImg.classList.toggle('side-person-image');
+            sideImg.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Kevin_B1_SyocJtF.jpg%3F_v%3D1592236569.79?auto=format&ixlib=python-1.1.2&w=200&s=4ff76f28f7d8c6039648f990458ecde3";
+            personDiv.getElementsByClassName('left-person-div')[0].append(sideImg);
+            
             lastImage = 18;
             break;
     }
@@ -229,6 +393,15 @@ function personInfo(num, clickedImg) {
 // If someone else's person image is clicked, change the old one back and hide the old info div
 function oldInfo() {
     let img = document.getElementsByClassName('person-img')[lastImage - 1];
+
+    // Destroy old image for 700px+ display
+    let oldSideImg = document.getElementsByClassName('side-person-image');
+    let x;
+    for (x = 0; x < oldSideImg.length; x++) {
+        oldSideImg[x].parentNode.removeChild(oldSideImg[x]);
+    }
+
+    // Stop displaying last person clicked info
     switch(lastImage) {
         case 1:
             img.src = "https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Sara-2020-A2.jpg%3F_v%3D1585933372.06?auto=format&ixlib=python-1.1.2&w=200&s=5317c0f4ed0ce44e467ece79a53084fa";

@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="./css/styles.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="icon" href="http://127.0.0.1:5500/favicon.ico">
         <title>Modern Desk Organization & Office Accessories | Grovemade&#174;</title>
     </head>
     <body>
@@ -86,7 +87,7 @@
             </div>
             <a class="capital-link no-underline roboto" href="#">My Cart</a>
         </header>
-        <section id="menu-section">
+        <section id="menu-section" class="fadeout">
             <div id="menu-left">
                 <ul>
                     <li class="menu-main-link">
@@ -203,6 +204,11 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div id="close-btn-div">
+                <button id="menu-close-btn" onclick="toggleHam()">
+                    Close
+                </button>
             </div>
         </section>
         <section id="hero-section">
@@ -345,7 +351,7 @@
             <h2 class="section-titles tablet-titles">Made The Hard Way</h2>
             <p class="gray roboto">In our Portland, Oregon workshop, we take products from design to fabrication, with a little help from collaborators along the way. Since 2009, we've been using this hands-on process to create products that couldn't exist otherwise.</p>
             <div id='responsive-container'>
-                <iframe id="responsive-frame" src="https://www.youtube.com/embed/M167KGw57ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="responsive-frame" src="https://www.youtube.com/embed/M167KGw57ho" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
         <section id="mission-section" class="section-margins">
@@ -355,175 +361,229 @@
                 <img class="person-img" name="2"onclick="personInfo(2,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Dashia-2017-A1_1.jpg%3F_v%3D1487269722.91?auto=format&ixlib=python-1.1.2&w=200&s=45abb6c0e5f878469240c734aa0826af" alt="" />
                 <img class="person-img" name="3" onclick="personInfo(3,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-John-2018-A1.jpg%3F_v%3D1529970563.92?auto=format&ixlib=python-1.1.2&w=200&s=8d465bdf8747454263a09d55a153e06b" alt="" />
                 <div class="hidden-info" id="one">
-                    <p class="first-person-info person-description">Sara Segura</p>
-                    <p class="person-description">Sara is so good at learning about things, that sometimes you say, “When did she learn to do that?” But before you even finish saying that she’s learned about something else! She’s a chocolate enthusiast with a degree in design. She likes to ponder low-waste living and sustainability while biking to work, which is nicely consistent of her. Unsurprisingly, she excels at many things in the shop, from woodworking to customer service and writing.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: KOALA
-                        <br>
-                        I'M GOOD AT: LEARNING!
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="first-person-info person-description">Sara Segura</p>
+                        <p class="person-description">Sara is so good at learning about things, that sometimes you say, “When did she learn to do that?” But before you even finish saying that she’s learned about something else! She’s a chocolate enthusiast with a degree in design. She likes to ponder low-waste living and sustainability while biking to work, which is nicely consistent of her. Unsurprisingly, she excels at many things in the shop, from woodworking to customer service and writing.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: KOALA
+                            <br>
+                            I'M GOOD AT: LEARNING!
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="two">
-                    <p class="person-description">Dashia Fontleroy</p>
-                    <p class="person-description">Dashia is the magical fairy of the woodshop; actually, she’s the magical fairy of everything good about Grovemade and life in general. When she’s not in the workshop, she’s building bookshelves at home or crocheting scarves and hats. Maybe all the gravel she sucked on as a child contributed to her talent with natural materials? Look out small stones, Dashia is a force of positive energy to be reckoned with. She’s also a loving Mom of two, and her true number one passion is family.</p>
-                    <p class="person-bttm gray roboto">
-                        I'M GOOD AT: BUILDING THINGS
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Dashia Fontleroy</p>
+                        <p class="person-description">Dashia is the magical fairy of the woodshop; actually, she’s the magical fairy of everything good about Grovemade and life in general. When she’s not in the workshop, she’s building bookshelves at home or crocheting scarves and hats. Maybe all the gravel she sucked on as a child contributed to her talent with natural materials? Look out small stones, Dashia is a force of positive energy to be reckoned with. She’s also a loving Mom of two, and her true number one passion is family.</p>
+                        <p class="person-bttm gray roboto">
+                            I'M GOOD AT: BUILDING THINGS
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="three">
-                    <p class="person-description">John Rasmussen</p>
-                    <p class="person-description">John is the master process-optimizer and efficiency aficionado in our shop, where he gets his hands dirty each day building beautiful products. He is a Portland native, and, so, naturally, he’s also an accomplished rock drummer. He has a rad collection of bikes, which he uses exclusively for cruisin’. He likes the Flaming Lips, and suggests that if you see them live, you should pay attention to the drummer.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: SNOOP DOG
-                        <br>
-                        I’M GOOD AT: DRUMMING AND MAKING BEAUTIFUL MUSIC
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">John Rasmussen</p>
+                        <p class="person-description">John is the master process-optimizer and efficiency aficionado in our shop, where he gets his hands dirty each day building beautiful products. He is a Portland native, and, so, naturally, he’s also an accomplished rock drummer. He has a rad collection of bikes, which he uses exclusively for cruisin’. He likes the Flaming Lips, and suggests that if you see them live, you should pay attention to the drummer.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: SNOOP DOG
+                            <br>
+                            I’M GOOD AT: DRUMMING AND MAKING BEAUTIFUL MUSIC
+                        </p>
+                    </div>
                 </div>
                 <img class="person-img" name="4" onclick="personInfo(4,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Ken-2017-A1.jpg%3F_v%3D1487285759.81?auto=format&ixlib=python-1.1.2&w=200&s=e75e27c0af6329916099dfd504bfee33" alt="" />
                 <img class="person-img" name="5" onclick="personInfo(5,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Max-2017-A1.jpg%3F_v%3D1487621129.81?auto=format&ixlib=python-1.1.2&w=200&s=d6b1234bdc9ce9d6a35420fcc586e470" alt="" />
                 <img class="person-img" name="6" onclick="personInfo(6,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Joe_011Captureone-1_edit_1.jpg%3F_v%3D1392967213.0?auto=format&ixlib=python-1.1.2&w=200&s=df44057ea59c0cbdc4ce6a7de9800c4a" alt="" />
                 <div class="hidden-info" id="four">
-                    <p class="person-description">Ken Tomita</p>
-                    <p class="person-description">Ken started the company with Joe in 2009 under the impression that eventually there’d be free pizza. Ken is a design nerd and furniture designer with a passion for photography and collecting weird things, like fruit stickers. He’s an active field trip enabler and enjoys bribing the team with Trailblazers tickets and empty promises that someday we’ll all get to see his expertly curated apartment. Check out some of his furniture designs </p>
-                    <p class="person-bttm gray roboto">
-                        I'M GOOD AT: DANCING TO 90s MUSIC
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Ken Tomita</p>
+                        <p class="person-description">Ken started the company with Joe in 2009 under the impression that eventually there’d be free pizza. Ken is a design nerd and furniture designer with a passion for photography and collecting weird things, like fruit stickers. He’s an active field trip enabler and enjoys bribing the team with Trailblazers tickets and empty promises that someday we’ll all get to see his expertly curated apartment. Check out some of his furniture designs </p>
+                        <p class="person-bttm gray roboto">
+                            I'M GOOD AT: DANCING TO 90s MUSIC
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="five">
-                    <p class="person-description">Max Brown</p>
-                    <p class="person-description">Max, named for the main character in Where the Wild Things Are, knows everything about every movie ever made. He’s got a passion for storytelling, from graphic novels and 80s horror films to Ray Bradbury. His resume paints a picture of a colorful life: projectionist, graphic artist at a modeling agency, bartender in foggy Astoria, photographer and videographer, and illustrator extraordinaire. Check out his illustrations
-                        <a class="no-underline orange-person-link" href="#"> here.</a>
-                    </p>
-                    <p class="person-bttm gray roboto">
-                        I'M GOOD AT: CRIBBAGE
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Max Brown</p>
+                        <p class="person-description">Max, named for the main character in Where the Wild Things Are, knows everything about every movie ever made. He’s got a passion for storytelling, from graphic novels and 80s horror films to Ray Bradbury. His resume paints a picture of a colorful life: projectionist, graphic artist at a modeling agency, bartender in foggy Astoria, photographer and videographer, and illustrator extraordinaire. Check out his illustrations
+                            <a class="no-underline orange-person-link" href="#"> here.</a>
+                        </p>
+                        <p class="person-bttm gray roboto">
+                            I'M GOOD AT: CRIBBAGE
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="six">
-                    <p class="person-description">Joe Mansfield</p>
-                    <p class="person-description">
-                        Joe is the other half of Grovemade’s founding pair, along with Ken. After six years of life changing challenges at Grovemade, he decided to switch things up and start a new paper goods company called
-                        <a class="no-underline bold-person-link" href="#"> Pacific & West</a>
-                        . He continues to laser anything he can fit into his machine, including a line of premium customizable leather goods called
-                        <a class="no-underline bold-person-link" href="#"> Engrave Goods</a>
-                        .
-                    </p>
-                    <p class="person-bttm gray roboto"></p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Joe Mansfield</p>
+                        <p class="person-description">
+                            Joe is the other half of Grovemade’s founding pair, along with Ken. After six years of life changing challenges at Grovemade, he decided to switch things up and start a new paper goods company called
+                            <a class="no-underline bold-person-link" href="#"> Pacific & West</a>
+                            . He continues to laser anything he can fit into his machine, including a line of premium customizable leather goods called
+                            <a class="no-underline bold-person-link" href="#"> Engrave Goods</a>
+                            .
+                        </p>
+                        <p class="person-bttm gray roboto"></p>
+                    </div>
                 </div>
                 <img class="person-img" name="7" onclick="personInfo(7,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Ben_A2_1.jpg%3F_v%3D1536256969.19?auto=format&ixlib=python-1.1.2&w=200&s=3d6c28fde5a82c9672025fc68e2ae44a" alt="" />
                 <img class="person-img" name="8" onclick="personInfo(8,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Justin_A1_5GYwcqK.jpg%3F_v%3D1592236364.58?auto=format&ixlib=python-1.1.2&w=200&s=a5bc8e0bde8800a78decd973c3cbe9ba" alt="" />
                 <img class="person-img" name="9" onclick="personInfo(9,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Victor-2017-A1.jpg%3F_v%3D1487269127.92?auto=format&ixlib=python-1.1.2&w=200&s=653f9d3d611a474cdff030e92a0e97bc" alt="" />
                 <div class="hidden-info" id="seven">
-                    <p class="person-description">Ben Wood</p>
-                    <p class="person-description">Ben is a fellow of numerous talents. Here at Grovemade, he's our manufacturing engineer, meaning he commands our machinery to do as he wills! He also fixes them when they break and puts them on timeout when they disobey the rules. A dedicated father of two radical daughters, Ben also loves taking them to the backcountry for adventurous excursions. When the perfect river or stream is found, they bring in the fish with Ben's handmade rods and flies. In his free time, Ben is also hard at work inventing a robot that will sing his favorite lullabies as he prepares to dive into his daily afternoon nap. And beware of disturbing Ben when he's at rest—his prototype Lullaby Robot X-25 is also outfitted with lasers.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: CUTTHROAT TROUT
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Ben Wood</p>
+                        <p class="person-description">Ben is a fellow of numerous talents. Here at Grovemade, he's our manufacturing engineer, meaning he commands our machinery to do as he wills! He also fixes them when they break and puts them on timeout when they disobey the rules. A dedicated father of two radical daughters, Ben also loves taking them to the backcountry for adventurous excursions. When the perfect river or stream is found, they bring in the fish with Ben's handmade rods and flies. In his free time, Ben is also hard at work inventing a robot that will sing his favorite lullabies as he prepares to dive into his daily afternoon nap. And beware of disturbing Ben when he's at rest—his prototype Lullaby Robot X-25 is also outfitted with lasers.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: CUTTHROAT TROUT
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="eight">
-                    <p class="person-description">Justin Abuan</p>
-                    <p class="person-description">Justin's a laid back guy who enjoys the finer things in life: a Tom Collins, a clean haircut, and the finest of contemporary cinema (Young Guns II; Cool Runnings; The Mighty Ducks). With a voice reminiscent of radio men of yon, Justin's soothing baritone brings an exuberant calm to the woodshop.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANMAL: EMILIO ESTEVEZ
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Justin Abuan</p>
+                        <p class="person-description">Justin's a laid back guy who enjoys the finer things in life: a Tom Collins, a clean haircut, and the finest of contemporary cinema (Young Guns II; Cool Runnings; The Mighty Ducks). With a voice reminiscent of radio men of yon, Justin's soothing baritone brings an exuberant calm to the woodshop.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANMAL: EMILIO ESTEVEZ
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="nine">
-                    <p class="person-description">Victor Nguyen</p>
-                    <p class="person-description">Victor, aka Victor Sweet, aka Victor Strong is not only our awesome Production Manager but he’s also one of our most powerful Grovemaders. Victor’s secret for superhuman  strength? A steady diet of hip-hop, rap, R&B and heaping scoops of white hot magma. When through with his morning routine of deadlifting small cars and tiny houses, you’ll find him fishing the banks of the Columbia River, where he reels in trolley-sized carps with his steely bare hands and a visage of extreme aplomb. When not performing unmatchable feats of strength, you’ll find this dynamo enjoying the many tasty tidbits found far and wide in our fair city.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: A MEAN BEAR
-                        <br>
-                        FAVORITE GOOD WORD: "THANK YOU!"
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Victor Nguyen</p>
+                        <p class="person-description">Victor, aka Victor Sweet, aka Victor Strong is not only our awesome Production Manager but he’s also one of our most powerful Grovemaders. Victor’s secret for superhuman  strength? A steady diet of hip-hop, rap, R&B and heaping scoops of white hot magma. When through with his morning routine of deadlifting small cars and tiny houses, you’ll find him fishing the banks of the Columbia River, where he reels in trolley-sized carps with his steely bare hands and a visage of extreme aplomb. When not performing unmatchable feats of strength, you’ll find this dynamo enjoying the many tasty tidbits found far and wide in our fair city.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: A MEAN BEAR
+                            <br>
+                            FAVORITE GOOD WORD: "THANK YOU!"
+                        </p>
+                    </div>
                 </div>
                 <img class="person-img" name="10" onclick="personInfo(10,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Keckeley-2020-A1.jpg%3F_v%3D1585945083.56?auto=format&ixlib=python-1.1.2&w=200&s=b2715455b5d452c99fda2768a9a615ce" alt="" />
                 <img class="person-img" name="11" onclick="personInfo(11,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Christopher-2020-A2.jpg%3F_v%3D1585932229.33?auto=format&ixlib=python-1.1.2&w=200&s=db204a798e033c2b7e1f6ee2c1902e0b" alt="" />
                 <img class="person-img" name="12" onclick="personInfo(12,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Sean-2020-A1.jpg%3F_v%3D1586203279.76?auto=format&ixlib=python-1.1.2&w=200&s=7367f4f031bcacdbff64384325fef84e" alt="" />
                 <div class="hidden-info" id="ten">
-                    <p class="person-description">Keckeley Habel</p>
-                    <p class="person-description">Keckeley is sometimes just so stoked that she’s not sure where to start. Which means she glides through the shop and headquarters, conquering any and all tasks. A Montana native, the Big Sky state has inspired a life-long pursuit of motion - from Sweden to London, the Appalachian Trail to upstate New York. She’s touched down in Portland to get to know all there is about biking and skiing… two things, which, if you’re in the know, you’ll know involve lots of fast movement.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: LOON
-                        <br>
-                        I’M GOOD AT: TRYING NEW THINGS
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Keckeley Habel</p>
+                        <p class="person-description">Keckeley is sometimes just so stoked that she’s not sure where to start. Which means she glides through the shop and headquarters, conquering any and all tasks. A Montana native, the Big Sky state has inspired a life-long pursuit of motion - from Sweden to London, the Appalachian Trail to upstate New York. She’s touched down in Portland to get to know all there is about biking and skiing… two things, which, if you’re in the know, you’ll know involve lots of fast movement.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: LOON
+                            <br>
+                            I’M GOOD AT: TRYING NEW THINGS
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="eleven">
-                    <p class="person-description">Christopher Stepanian</p>
-                    <p class="person-description">Christopher keeps to a strict diet of one movie per day, to keep the doctor away. Naturally, this involves lots of inside time, but don’t worry, he also believes in going outside. Some of his other favorite things are designing furniture, playing video games, and eating tacos. In the shop, he leverages those skills (primarily eating tacos) to coax beautiful shapes from raw materials.</p>
-                    <p class="person-bttm gray roboto">
-                        I'M GOOD AT: SURVIVING
-                        <br>
-                        I’M GOOD AT: RE-WATCHING THE OFFICE THE SECOND I FINISH IT
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Christopher Stepanian</p>
+                        <p class="person-description">Christopher keeps to a strict diet of one movie per day, to keep the doctor away. Naturally, this involves lots of inside time, but don’t worry, he also believes in going outside. Some of his other favorite things are designing furniture, playing video games, and eating tacos. In the shop, he leverages those skills (primarily eating tacos) to coax beautiful shapes from raw materials.</p>
+                        <p class="person-bttm gray roboto">
+                            I'M GOOD AT: SURVIVING
+                            <br>
+                            I’M GOOD AT: RE-WATCHING THE OFFICE THE SECOND I FINISH IT
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="twelve">
-                    <p class="person-description">Sean Kelly</p>
-                    <p class="person-description">Sean is a man-bear hybrid who rules the woodshop with the ultimate weapon: love. His heart is so big he doesn’t have room for any other organs, and he’s got a PhD in Silliness. Alright, he does have a brain, but, it’s part of his heart -- it’s like a heart-brain. His heart-brain is SMART. This guy is a space camp graduate and a product design genius! He’s also got an amazing collection of embarrassing stories to make you cringe with joy.</p>
-                    <p class="person-bttm gray roboto">
-                        I LIKE TO HELP PEOPLE LAUGH.                        
-                        <br>
-                        IF I CAN'T HELP THEM, I MAKE THEM.
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Sean Kelly</p>
+                        <p class="person-description">Sean is a man-bear hybrid who rules the woodshop with the ultimate weapon: love. His heart is so big he doesn’t have room for any other organs, and he’s got a PhD in Silliness. Alright, he does have a brain, but, it’s part of his heart -- it’s like a heart-brain. His heart-brain is SMART. This guy is a space camp graduate and a product design genius! He’s also got an amazing collection of embarrassing stories to make you cringe with joy.</p>
+                        <p class="person-bttm gray roboto">
+                            I LIKE TO HELP PEOPLE LAUGH.                        
+                            <br>
+                            IF I CAN'T HELP THEM, I MAKE THEM.
+                        </p>
+                    </div>
                 </div>
                 <img class="person-img" name="13" onclick="personInfo(13,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Mike-2020-A2.jpg%3F_v%3D1585930983.21?auto=format&ixlib=python-1.1.2&w=200&s=d825f8349f4b14cf4bfde711ceabf351" alt="" />
                 <img class="person-img" name="14" onclick="personInfo(14,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Lydia-2020-A2.jpg%3F_v%3D1585950915.6?auto=format&ixlib=python-1.1.2&w=200&s=623b13baa1c2eb59f2a1c87db41d560a" alt="" />
                 <img class="person-img" name="15" onclick="personInfo(15,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Christian-2020-A1.jpg%3F_v%3D1586197301.22?auto=format&ixlib=python-1.1.2&w=200&s=0af3031172a2ce388ba342b0d98dba78" alt="" />
                 <div class="hidden-info" id="thirteen">
-                    <p class="person-description">Mike Vos</p>
-                    <p class="person-description">Mike is a passionate pursuer of the perfect photo. And, the perfect pad thai. He’s a professional in many senses of the word: professional large format film photographer, professional musician, professional skateboard instructor, and professional positive presence. Mike is also a professional in the woodshop. His favorite letter might be ‘p,’ but let’s not get too carried away.  You can check out his photography
-                    <a class="no-underline orange-person-link" href="#"> here.</a>
-                    </p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: CAT
-                        <br>
-                        I'M GOOD AT: WORKING HARD FOR THINGS I’M PASSIONATE ABOUT!
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Mike Vos</p>
+                        <p class="person-description">Mike is a passionate pursuer of the perfect photo. And, the perfect pad thai. He’s a professional in many senses of the word: professional large format film photographer, professional musician, professional skateboard instructor, and professional positive presence. Mike is also a professional in the woodshop. His favorite letter might be ‘p,’ but let’s not get too carried away.  You can check out his photography
+                        <a class="no-underline orange-person-link" href="#"> here.</a>
+                        </p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: CAT
+                            <br>
+                            I'M GOOD AT: WORKING HARD FOR THINGS I’M PASSIONATE ABOUT!
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="fourteen">
-                    <p class="person-description">Lydia Segura</p>
-                    <p class="person-description">Lydia is a proponent of the ancient Greek philosophy of “Both”, rather than “Either/Or”—ice cream, for example, is something she enjoys in a very equal-opportunity sort of way. She works in the shop at Grovemade, assisting in all levels of production and operations. Again, “Both,” not “Either/Or.” In her spare time, you can find her gardening, as long as that garden is outside. Her heart melts at the thought of fondue, which is a joke she imagines telling her friends at culinary school someday.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: OTTER AND LABRADOR RETRIEVER
-                        <br>
-                        I'M GOOD AT: BAKING AND EVEN BETTER AT EATING
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Lydia Segura</p>
+                        <p class="person-description">Lydia is a proponent of the ancient Greek philosophy of “Both”, rather than “Either/Or”—ice cream, for example, is something she enjoys in a very equal-opportunity sort of way. She works in the shop at Grovemade, assisting in all levels of production and operations. Again, “Both,” not “Either/Or.” In her spare time, you can find her gardening, as long as that garden is outside. Her heart melts at the thought of fondue, which is a joke she imagines telling her friends at culinary school someday.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: OTTER AND LABRADOR RETRIEVER
+                            <br>
+                            I'M GOOD AT: BAKING AND EVEN BETTER AT EATING
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="fifteen">
-                    <p class="person-description">Christian Neilander</p>
-                    <p class="person-description">Christian is a jack of all trades, but don’t call him “Jack”. Event planning? Check. Building everything? Check. Resident wakeboarder? Check. Producing a vodka brand? Check. He came to us from Lake Tahoe and the University of Oregon Product Design program, where he says he built a particle accelerator that fits in your pocket, but we think he was exaggerating. In his spare time he advises on ideal burger toppings and talks about his Subaru.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: COOKIE MONSTER
-                        <br>
-                        I'M GOOD AT: MAKING THINGS
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Christian Neilander</p>
+                        <p class="person-description">Christian is a jack of all trades, but don’t call him “Jack”. Event planning? Check. Building everything? Check. Resident wakeboarder? Check. Producing a vodka brand? Check. He came to us from Lake Tahoe and the University of Oregon Product Design program, where he says he built a particle accelerator that fits in your pocket, but we think he was exaggerating. In his spare time he advises on ideal burger toppings and talks about his Subaru.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: COOKIE MONSTER
+                            <br>
+                            I'M GOOD AT: MAKING THINGS
+                        </p>
+                    </div>
                 </div>
                 <img class="person-img" name="16" onclick="personInfo(16, this);" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Nick-2020-A1.jpg%3F_v%3D1585950624.55?auto=format&ixlib=python-1.1.2&w=200&s=0cbae4fbc904ea940e9bdc6787f5ca91" alt="" />
                 <img class="person-img" name="17" onclick="personInfo(17,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits-Nozomi-2017-A1.jpg%3F_v%3D1488819935.12?auto=format&ixlib=python-1.1.2&w=200&s=d20d30c78ef68b71800c0cea7699a247" alt="" />
                 <img class="person-img" name="18" onclick="personInfo(18,this)" src="https://grovemade.imgix.net/http%3A%2F%2Fgrovemade.com%2Fshop-static%2Fteam%2FPortraits_Grove_Kevin_A1_6W7sppX.jpg%3F_v%3D1592236569.79?auto=format&ixlib=python-1.1.2&w=200&s=389c695996b7cf4464a94e8b11ec8264" name="18" alt="" />
                 <div class="hidden-info" id="sixteen">
-                    <p class="person-description">Nick LaPlante</p>
-                    <p class="person-description">Nick is an accomplished toothbrusher. He used to do 20 pushups every night before bed, but he stopped a while ago and hasn’t looked back. Some of his favorite things are coffee, cooking while wearing aprons, throwing anything round, and music. Nick is our resident word-smith and idea generator and customer question answerer. He loves email subject lines and looking at numbers for a long time and then drawing graphs.</p>
-                    <p class="person-bttm gray roboto">
-                        I'M GOOD AT: THINKING ABOUT THINGS
-                        <br>
-                        SPIRIT ANIMAL: SHEEP
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Nick LaPlante</p>
+                        <p class="person-description">Nick is an accomplished toothbrusher. He used to do 20 pushups every night before bed, but he stopped a while ago and hasn’t looked back. Some of his favorite things are coffee, cooking while wearing aprons, throwing anything round, and music. Nick is our resident word-smith and idea generator and customer question answerer. He loves email subject lines and looking at numbers for a long time and then drawing graphs.</p>
+                        <p class="person-bttm gray roboto">
+                            I'M GOOD AT: THINKING ABOUT THINGS
+                            <br>
+                            SPIRIT ANIMAL: SHEEP
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="seventeen">
-                    <p class="person-description">Nozomi Nakayama Ratchford</p>
-                    <p class="person-description">Nozomi is a world-traveling musician and number wizard extraordinaire. She makes sure all of our business details have nice snug little homes where they don’t get lost or swept under the rug. In a past life, she was a scientist, and we all feel much smarter when she’s around. Her ideal Sunday includes Dim Sum - but she wouldn’t tell us about the rest of the day, because she says she really likes to be mysterious, so there you go.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: MONKEY
-                        <br>
-                        I'M GOOD AT: REMEMBERING DETAILS
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Nozomi Nakayama Ratchford</p>
+                        <p class="person-description">Nozomi is a world-traveling musician and number wizard extraordinaire. She makes sure all of our business details have nice snug little homes where they don’t get lost or swept under the rug. In a past life, she was a scientist, and we all feel much smarter when she’s around. Her ideal Sunday includes Dim Sum - but she wouldn’t tell us about the rest of the day, because she says she really likes to be mysterious, so there you go.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: MONKEY
+                            <br>
+                            I'M GOOD AT: REMEMBERING DETAILS
+                        </p>
+                    </div>
                 </div>
                 <div class="hidden-info" id="eighteen">
-                    <p class="person-description">Kevin Do</p>
-                    <p class="person-description">Kevin, Grovemade industrial designer extraordinaire, is a man at the height of his particular imaginative talents. That is to say that he's in his prime. Known to his friends as Magiva (majēva), he's powered by avocados, senzu beans, and tins of sardines. Kevin's an inquisitive guy who's dedicated to learning and expanding his skillset. With an earthling-first attitude, he's here to design as well as to improve his sleight of hand.</p>
-                    <p class="person-bttm gray roboto">
-                        SPIRIT ANIMAL: GOKU
-                    </p>
+                    <div class="left-person-div"></div>
+                    <div class="right-person-div">
+                        <p class="person-description">Kevin Do</p>
+                        <p class="person-description">Kevin, Grovemade industrial designer extraordinaire, is a man at the height of his particular imaginative talents. That is to say that he's in his prime. Known to his friends as Magiva (majēva), he's powered by avocados, senzu beans, and tins of sardines. Kevin's an inquisitive guy who's dedicated to learning and expanding his skillset. With an earthling-first attitude, he's here to design as well as to improve his sleight of hand.</p>
+                        <p class="person-bttm gray roboto">
+                            SPIRIT ANIMAL: GOKU
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -545,10 +605,13 @@
                 <p id="newsletter-about">
                     Sign up to our Newsletter to hear about new product releases, learn about our design process, and everything else going on behind the scenes at Grovemade.
                 </p>
-                <form>
-                    <input type="email" placeholder="Enter Your Email" />
+                <form name="emailForm" onkeydown="validation()">
+                    <input name="emailInput" type="email" placeholder="Enter Your Email" />
                     <input type="submit" value="Submit" />
                 </form>
+                <div id="errors">
+                    <p id="formErrors"></p>
+                </div>
             </section>
             <section class="section-margins" id="link-section">
                 <a class="footer-link" href="#">Shop</a>
@@ -584,6 +647,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/personHandler.js"></script>
     <script src="js/menuHandler.js"></script>
+    <script src="js/validation.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
           slidesPerView: 2,
@@ -610,6 +674,4 @@
 
 <!--
     change menu for 700px+
-    change person info for larger sizes
-    form error display
 -->
