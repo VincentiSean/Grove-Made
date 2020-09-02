@@ -24,8 +24,12 @@
                 </div>
             </button>
             <nav id="tablet-nav">
-                <a class="roboto" href="#">Shop</a>
-                <a class="roboto" href="#">Explore</a>
+                <a class="tablet-link roboto" href="#" onclick="clickToggleMenu('shop')" onmouseover="openLargeMenu('shop')">
+                    Shop
+                </a>
+                <a class="tablet-link roboto" href="#" onclick="clickToggleMenu('explore')" onmouseover="openLargeMenu('explore')">
+                    Explore
+                </a>
             </nav>
             <div id="company-logo">
                 <a href="/">
@@ -209,6 +213,70 @@
                 <button id="menu-close-btn" onclick="toggleHam()">
                     Close
                 </button>
+            </div>
+        </section>
+        <section id="large-menu-section">
+            <div id="shop-menu" class="large-menu-submenus">
+                <a class="large-menu-links" href="#">Shop</a>
+                <a class="large-menu-links" href="#">Desk</a>
+                <a class="large-menu-links" href="#">Tools</a>
+                <a class="large-menu-links" href="#">Office</a>
+                <div>
+                    <a class="shop-explore-links" href="#">Shop All</a>
+                    <a class="shop-explore-links" href="#">New Arrivals</a>
+                </div>
+                <div>
+                    <a class="shop-explore-links" href="#">Monitor & Laptop Stands</a>
+                    <a class="shop-explore-links" href="#">Desk Shelves</a>
+                    <a class="shop-explore-links" href="#">Desk Pads</a>
+                    <a class="shop-explore-links" href="#">Keyboard & Mouse</a>
+                    <a class="shop-explore-links" href="#">Headphone Stands</a>
+                    <a class="shop-explore-links" href="#">View All</a>
+                </div>
+                <div>
+                    <a class="shop-explore-links" href="#">Pens</a>
+                    <a class="shop-explore-links" href="#">Knives</a>
+                    <a class="shop-explore-links" href="#">Notebooks</a>
+                    <a class="shop-explore-links" href="#">Wireless Chargers</a>
+                    <a class="shop-explore-links" href="#">View All</a>
+                </div>
+                <div>
+                    <a class="shop-explore-links" href="#">Catch-All</a>
+                    <a class="shop-explore-links" href="#">Wall Shelves</a>
+                    <a class="shop-explore-links" href="#">Planters and Pen Cups</a>
+                    <a class="shop-explore-links" href="#">Coasters</a>
+                    <a class="shop-explore-links" href="#">View All</a>
+                </div>
+            </div>
+            <div id="explore-menu" class="large-menu-submenus">
+                <a class="large-menu-links" href="#">About</a>
+                <a class="large-menu-links" href="#">Journal</a>
+                <a class="large-menu-links" href="#">Connect</a>
+                <div>
+                    <a class="shop-explore-links" href="#">Our Story</a>
+                    <a class="shop-explore-links" href="#">Origins</a>
+                    <a class="shop-explore-links" href="#">Our Home</a>
+                    <a class="shop-explore-links" href="#">Visit Us</a>
+                </div>
+                <div>
+                    <a class="shop-explore-links" href="#">Customer Stories</a>
+                    <a class="shop-explore-links" href="#">Design Stories</a>
+                    <a class="shop-explore-links" href="#">Product Highlights</a>
+                    <a class="shop-explore-links" href="#">Behind the Scenes</a>
+                    <a class="shop-explore-links" href="#">Material Focus</a>
+                    <a class="shop-explore-links" href="#">View All</a>
+                </div>
+                <div>
+                    <a class="shop-explore-links" href="#">Support</a>
+                    <a class="shop-explore-links" href="#">Instagram</a>
+                    <a class="shop-explore-links" href="#">Facebook</a>
+                    <a class="shop-explore-links" href="#">Pintrest</a>
+                    <a class="shop-explore-links" href="#">LinkedIn</a>
+                </div>
+                <div id="menu-pic-div">
+                    <img id="menu-pic" src="https://grovemade.imgix.net/https%3A%2F%2Fsiteleaf.grovemade.com%2Fuploads%2Fgrovemade-about2017-I1.jpg?auto=format&ixlib=python-1.1.2&w=700&s=b51e131ac3ad9ccc842f2df6b0c563cc" alt="" />
+                    <p id="menu-caption">Our Story</p>
+                </div>
             </div>
         </section>
         <section id="hero-section">
@@ -667,11 +735,51 @@
               }
           }
         });
-      </script>
+    </script>
+    <script>
+        // Workaround for hover state of large menu nav links
+        function openLargeMenu(linkName) {
+            closeLargeMenu();
+            document.getElementById('large-menu-section').style.display = 'block';
+
+            if (linkName === 'shop') {
+                document.getElementById('shop-menu').style.display = 'grid';
+            } else if (linkName === 'explore') {
+                document.getElementById('explore-menu').style.display = 'grid';
+            }
+        }
+
+        // A way to 'hover' close the top nav menus
+        function closeLargeMenu() {
+            let divs = document.getElementsByClassName('large-menu-submenus');
+            let i;
+            for (i = 0; i < divs.length; i++) {
+                divs[i].style.display = 'none';
+            }
+
+            document.getElementById('large-menu-section').style.display = 'none';
+        }
+
+        // If the links 'Shop' or 'Explore' are clicked open/close them
+        function clickToggleMenu(linkName) {
+            let largeMenu = document.getElementById('large-menu-section');
+
+            if (largeMenu.style.display === 'none') {
+                largeMenu.style.display = 'block';
+                if (linkName === 'shop') {
+                    document.getElementById('shop-menu').style.display = 'grid';
+                } else if (linkName === 'explore') {
+                    document.getElementById('explore-menu').style.display = 'grid';
+                }
+            } else {
+                largeMenu.style.display = 'none';
+                if (linkName === 'shop') {
+                    document.getElementById('shop-menu').style.display = 'none';
+                } else if (linkName === 'explore') {
+                    document.getElementById('explore-menu').style.display = 'none';
+                }
+            }
+        }
+    </script>
     </body>
 </html>
-
-
-<!--
-    change menu for 700px+
--->

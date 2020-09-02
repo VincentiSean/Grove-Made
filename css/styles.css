@@ -1085,6 +1085,7 @@ header a {
     }
 
     header {
+        border-bottom: 1px solid #eee;
         height: 75px;
     }
 
@@ -1095,6 +1096,56 @@ header a {
     #tablet-nav {
         display: inline;
         margin-left: 50px;
+        position: relative;
+    }
+
+    #large-menu-section {
+        background-color: #fff;
+        display: none;
+        position: fixed;
+        height: 58vh;
+        width: 100%;
+        z-index: 100;
+    }
+
+    #shop-menu {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 8fr;
+        row-gap: 20px;
+        height: 58vh;
+        margin-left: 50px;
+        width: 65%;
+    }
+
+    #shop-menu div, #explore-menu div {
+        display: block;
+        height: 100%;
+        line-height: 1.25em;
+        width: 60%;
+    }
+
+    #explore-menu {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+        grid-template-rows: 1fr 8fr;
+        row-gap: 20px;
+        height: 58vh;
+        margin-left: 50px;
+        width: 100%;
+    }
+
+    #menu-pic-div {
+        grid-column: 4/4;
+        grid-row: 1/3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 auto 0 20px;
+        width: 100%;
+        min-width: 250px;
     }
 
     #tile-container {
@@ -1201,9 +1252,124 @@ header a {
         flex-direction: row;
     }
 
+    /*--------------
+    |   Clickables |
+     --------------*/
+
+    .capital-link {
+        font-size: 0.8em;
+        margin-right: 4em;
+    }
+
+    .tablet-link {
+        color: #2a2a2a;
+        font-size: 0.85em;
+        font-weight: 600;
+        height: 35px;
+        letter-spacing: 0.05em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.5s ease-in-out;
+    }
+
+    .tablet-link:after {
+        content: "";  
+        display: block; 
+        margin: 0 auto; 
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%; 
+        border-bottom: 1px solid #000; 
+        transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+    }
+
+    .tablet-link:hover:after {
+        width: 95%;
+    }
+
+    .large-menu-links {
+        color: #2a2a2a;
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+
+    .shop-explore-links {
+        color: #9aa8b1;
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.85em;
+        font-weight: 400;
+        margin-bottom: 1em;
+        text-decoration: none;
+    }
+
+    .learn-link {
+        border-bottom: 1px solid #2a2a2a;
+        font-size: 0.8em;
+    }
+
+    #up-btn-div a {
+        background-color: #000;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 600;
+        height: 80px;
+        line-height: 0.9em;
+        margin-right: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 80px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-link {
+        font-size: 1.2em;
+    }
+
+    .copyright-links {
+        font-size: 0.7em;
+    }
+
+    #department-link {
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 5px;
+        right: 40px;
+    }
+
+    /*---------------
+    |     Images    |
+     --------------*/
+    #menu-pic {
+        height: auto;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .side-person-image {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+
     /* -----------------
     |       Text        |
      ------------------*/
+     #menu-caption {
+        font-size: 0.8em;
+        font-style: italic;
+        margin-top: 1em;
+        text-align: center;
+    }
 
      .tight-titles {
          font-size: 2.5em;
@@ -1299,70 +1465,6 @@ header a {
     
     #copyright-div p {
         font-size: 0.7em;
-    }
-
-    /*--------------
-    |   Clickables |
-     --------------*/
-
-    .capital-link {
-        font-size: 0.8em;
-        margin-right: 4em;
-    }
-
-    #tablet-nav a {
-        color: #2a2a2a;
-        font-size: 0.85em;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .learn-link {
-        border-bottom: 1px solid #2a2a2a;
-        font-size: 0.8em;
-    }
-
-    #up-btn-div a {
-        background-color: #000;
-        color: #fff;
-        font-size: 1em;
-        font-weight: 600;
-        height: 80px;
-        line-height: 0.9em;
-        margin-right: 50px;
-        text-decoration: none;
-        text-transform: uppercase;
-        width: 80px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer-link {
-        font-size: 1.2em;
-    }
-
-    .copyright-links {
-        font-size: 0.7em;
-    }
-
-    #department-link {
-        font-size: 0.8em;
-        position: absolute;
-        bottom: 5px;
-        right: 40px;
-    }
-
-    /*---------------
-    |     Images    |
-     --------------*/
-    .side-person-image {
-        display: block;
-        margin-top: 20px;
-        width: 100%;
     }
 
     /*---------------
